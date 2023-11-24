@@ -1,17 +1,20 @@
     
     function truthy_C() {
         //decleared an array of boolean values
-        let boolean_Array = [true, true, false, true, false, true, false, true]
-        //contructed an function expression
+        let boolean_Array = [true, true, false,true, false, true, false, true]
+        //contructed a function expression with containing a condition to filter true values only.
         let aFilter = boolean_Array.filter(truthyCount =>{
             return truthyCount===true
         })  
         return aFilter.length
     }
-    
-console.log(truthy_C());
+    // decleared a button variable
     let btn= document.querySelector('[data-btn]')
-    btn.addEventListener('click', function () {
-        truthy_C()
-    })
+    // decleared a input variable
     let view= document.querySelector('[data-value]')
+    // added an event listner to the button
+    btn.addEventListener('click', function () {
+        view.value=truthy_C()
+    } 
+   )
+   
